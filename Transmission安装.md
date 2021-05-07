@@ -1,7 +1,7 @@
-![thum-b7e31533520749](https://user-images.githubusercontent.com/59044398/117425849-c78e3a00-af55-11eb-94e5-a57899e7d1ec.png)
+
 # Synology
 
-一、添加第三方源
+### 一、添加第三方源
 
 1、用管理员admin账号登录DSM桌面，打开“套件中心”，点击“设置” ---> “常规”，选择“任何发行者”；
 
@@ -39,9 +39,8 @@ http://packages.synocommunity.com/?beta=1
 ![thum-b7e31533520749](https://user-images.githubusercontent.com/59044398/117425866-ce1cb180-af55-11eb-946b-fb78c686c6f9.png)
 
 
- 
 
-二、安装Transmission
+### 二、安装Transmission
 
 1、在“套件中心”的“社群”找到“Transmission”，点击“安装套件”，会自动下载安装
 
@@ -87,8 +86,7 @@ Incomplete directory：未完成下载目录，留空表示禁用（建议不填
 
 打开“File station”，“downloads”文件夹右击，选择“属性”，新增“Everyone”账号，权限选择“读取”和“写入”，勾上“应用到这个文件夹、子文件夹及文件”，确定
 
-
-三、界面汉化
+### 三、界面汉化
 
 方法一
 
@@ -110,7 +108,7 @@ Incomplete directory：未完成下载目录，留空表示禁用（建议不填
 
 8、中文界面就出来了
 
-ps：如果SCP显示禁止访问，不能复制，请见SCP权限设置方法
+##### ps：如果SCP显示禁止访问，不能复制，请见SCP权限设置方法
 
 【https://github.com/Meidouzanget/Synology/blob/main/SCP%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6%E6%9D%83%E9%99%90.md 】
 
@@ -118,7 +116,7 @@ ps：如果SCP显示禁止访问，不能复制，请见SCP权限设置方法
 
 
 
-方法二
+#### 方法二
 
 在套件中心，关闭transmission。
 1、到套件中心，停用Transmission

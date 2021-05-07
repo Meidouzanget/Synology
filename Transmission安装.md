@@ -128,7 +128,7 @@ Incomplete directory：未完成下载目录，留空表示禁用（建议不填
 ![20201007-Transmission10](https://user-images.githubusercontent.com/59044398/117431820-3f5f6300-af5c-11eb-8419-6a5847e79d5c.png)
 
 
-4、root,输入你群晖root的密码，再次输入代码：sudo su ，密码，获取root权限
+4、root,输入你群晖root的密码，再次输入代码：sudo -i ，密码，获取root权限
 
 ![20201007-Transmission11](https://user-images.githubusercontent.com/59044398/117431887-52723300-af5c-11eb-81ed-21dc71b6d9c9.png)
 

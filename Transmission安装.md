@@ -90,6 +90,8 @@ Incomplete directory：未完成下载目录，留空表示禁用（建议不填
 
 三、界面汉化
 
+方法一
+
 1、Transmission安装完成后打开界面如下，是英文界面，你可以把它进行汉化
 
 ![thum-01aa1533537168](https://user-images.githubusercontent.com/59044398/117431044-56ea1c00-af5b-11eb-814b-4f047bd5609d.png)
@@ -109,6 +111,45 @@ Incomplete directory：未完成下载目录，留空表示禁用（建议不填
 8、中文界面就出来了
 
 ![38598199-0d2e684c-3d8e-11e8-8b21-3cd1f3c7580a](https://user-images.githubusercontent.com/59044398/117431066-5e112a00-af5b-11eb-8756-6588fc080bab.png)
+
+
+方法二
+
+在套件中心，关闭transmission。
+1、到套件中心，停用Transmission
+2、开启群晖SSH功能。打开“控制面板”-“应用程序：终端机和SNMP”，勾选“启动SSH功能”。
+![20201007-Transmission9](https://user-images.githubusercontent.com/59044398/117431842-45554400-af5c-11eb-95a2-f34a1f78e794.png)
+
+
+3、下载运行putty软件。打开后，输入群晖的内网IP，端口默认22，选择SSH，点击连接。
+![20201007-Transmission10](https://user-images.githubusercontent.com/59044398/117431820-3f5f6300-af5c-11eb-8419-6a5847e79d5c.png)
+
+
+
+4、root,输入你群晖root的密码，再次输入代码：sudo su ，密码，获取root权限
+![20201007-Transmission11](https://user-images.githubusercontent.com/59044398/117431887-52723300-af5c-11eb-81ed-21dc71b6d9c9.png)
+
+
+
+5、输入以下代码，安装脚本
+![20201007-Transmission12](https://user-images.githubusercontent.com/59044398/117431900-556d2380-af5c-11eb-8fc3-d9a8e99ed5b1.png)
+
+wget https://github.com/ronggang/transmission-web-control/raw/master/release/install-tr-control-cn.sh
+511遇见
+
+6、继续执行安装脚本，这里可以看到显示中文安装脚本，然后选择“1”进行安装最新发布版（如果无法正常显示中文，需设置putty的编码为UTF-8）
+
+sudo bash install-tr-control-cn.sh
+![20201007-Transmission13](https://user-images.githubusercontent.com/59044398/117431925-5bfb9b00-af5c-11eb-90ba-a3c1a59050eb.png)
+
+
+7、等待安装完成
+![20201007-Transmission14](https://user-images.githubusercontent.com/59044398/117431946-5f8f2200-af5c-11eb-9d97-5456f5c43e43.png)
+
+
+
+到套件中心重新启动transmission
+1、刷新网页，或者按Ctrl+F5强制刷新页面，看到下面的效果，OK!汉化的非常适合我们，感谢作者
 
 
 

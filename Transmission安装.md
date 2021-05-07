@@ -61,6 +61,7 @@ Incomplete directory：未完成下载目录，留空表示禁用（建议不填
 
 
 3、设置用户账号和密码（每次进入TR需要输入的用户名和密码）
+
 设置好并记住，否则无法进入网页，要卸载重装
 
 ![thum-78d51533532065](https://user-images.githubusercontent.com/59044398/117427404-96af0480-af57-11eb-9e28-702a6cf979fd.png)
@@ -71,6 +72,8 @@ Incomplete directory：未完成下载目录，留空表示禁用（建议不填
 
 
 5、安装完成后后，打开“套件中心” ---> “Transmission”，找到URL，可以直接打开Web UI（如果你用内网地址安装，则显示内网地址）
+
+旧版安装后会显示桌面图标，点击可进入网址，更新后需要在套件中心查看
 
 ![fe2e1533532355](https://user-images.githubusercontent.com/59044398/117427321-826b0780-af57-11eb-91a4-5a587d87d6f7.png)
 

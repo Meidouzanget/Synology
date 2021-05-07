@@ -98,9 +98,9 @@ Incomplete directory：未完成下载目录，留空表示禁用（建议不填
 
 2、汉化包项目地址：https://github.com/ronggang/transmission-web-control
 
-3、解压文件，会得到web文件夹和此“使用方法”文件 
+3、解压文件参考官网的安装教程 https://github.com/ronggang/transmission-web-control/wiki/Windows-Installation-CN
 
-4、用WinSCP以root登录群晖，进入/volume1/@appstore/transmission/share/transmission，如果你的套件安装在盘1则地址是/volume1，以此类推。（如果）
+4、用WinSCP以root登录群晖，进入/volume1/@appstore/transmission/share/transmission/web，如果你的套件安装在盘1则地址是/volume1，以此类推。或者 /usr/local/transmission/share/transmission/web，不同的方法进入相同的文件夹
 
 5、把群晖上的web文件夹改成web-bak
 

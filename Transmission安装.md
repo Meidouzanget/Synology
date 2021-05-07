@@ -1,3 +1,4 @@
+![thum-b7e31533520749](https://user-images.githubusercontent.com/59044398/117425849-c78e3a00-af55-11eb-94e5-a57899e7d1ec.png)
 # Synology
 
 一、添加第三方源
@@ -35,7 +36,8 @@ http://packages.synocommunity.com/?beta=1
 
 3、刷新“套件中心”，找到“社群”。这个就是第三方源
 
-257-3.png
+![thum-b7e31533520749](https://user-images.githubusercontent.com/59044398/117425866-ce1cb180-af55-11eb-946b-fb78c686c6f9.png)
+
 
  
 
@@ -43,7 +45,8 @@ http://packages.synocommunity.com/?beta=1
 
 1、在“套件中心”的“社群”找到“Transmission”，点击“安装套件”，会自动下载安装
 
-257-4.png
+[Uploading 0c1c1533524991.png…]()
+
 
 2、Transmission下载设置
 
@@ -56,26 +59,26 @@ Incomplete directory：未完成下载目录，留空表示禁用（建议不填
 257-5.png
 
 3、设置用户账号和密码（每次进入TR需要输入的用户名和密码）
+设置好并记住，否则无法进入网页，要卸载重装
 
-257-6.png
+[Uploading thum-78d51533532065.png…]()
+
 
 4、权限提示，直接“下一步”
 
-257-7.png
 
 5、安装完成后后，打开“套件中心” ---> “Transmission”，找到URL，可以直接打开Web UI（如果你用内网地址安装，则显示内网地址）
 
-257-8.png
+[fe2e1533532355](https://user-images.githubusercontent.com/59044398/117426540-95c9a300-af56-11eb-8ade-e92e767fb741.png)
+
 
 6、文件夹权限设置（这个步骤非常重要，否则你的TR下载不了）
 
 打开“控制面板” ---> “共享文件夹” ---> “downloads”（刚才安装Transmission创建的下载文件夹名称），点击“编辑”，选择“本地群组”，选择“sc-download”设置为可读写
 
-257-9.png
+[Uploading thum-91a41533536525.png…]()
+
 
 打开“File station”，“downloads”文件夹右击，选择“属性”，新增“Everyone”账号，权限选择“读取”和“写入”，勾上“应用到这个文件夹、子文件夹及文件”，确定
 
-257-10.png
-
-257-11.png
 

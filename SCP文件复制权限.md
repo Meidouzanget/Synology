@@ -4,7 +4,7 @@
 
 
 
-但是在使用winscp的过程中发现一个问题，使用自行设定的管理员账号密码后台登陆群晖后，对于一些权限敏感的文件夹，想从本地复制文件到群晖中时，winscp的操作会被群晖拒绝，如下图所示：
+在使用winscp的过程中发现一个问题，使用自行设定的管理员账号密码后台登陆群晖后，对于一些权限敏感的文件夹，想从本地复制文件到群晖中时，winscp的操作会被群晖拒绝，如下图所示：
 
 <img width="340" alt="5f7ff2af394d53745 png_e680" src="https://user-images.githubusercontent.com/59044398/117491256-8a03ce00-afa2-11eb-9313-71f71e7c1469.png">
 
@@ -13,7 +13,13 @@
 
 以前DSM6.0的时候可以通过改root密码的方式，来通过winscp来登录nas，这样可以获得最高权限可以任意修改文件。但是在DSM6.2的时候群晖把这个方式封了，幸好现在找到了另外的方式来解封
 
-#### 操作步骤
+#### **一、准备工具**
+
+1、putty
+
+2、WinSCP
+
+#### 二、DSM开启SSH
 
 1.打开群晖管理页面，找到控制面板—》应用程序—》终端机和SNMP
 
@@ -24,8 +30,35 @@
 
 <img width="340" alt="5f7ff558111307691 png_e680" src="https://user-images.githubusercontent.com/59044398/117491297-99831700-afa2-11eb-9a25-7e4d4796805c.png">
 
+2、配置root账号
 
-2.下载一个putty软件，打开putty，在红框中填入群晖的局域网地址，然后点击下方的“OPEN”按钮。
+login as：输入admin账号。就是当时第一次配置DSM输入的账号。输入admin的密码。（输入完按回车）
+
+登录成功后，输入sudo -i
+
+会提示输入密码password，这边还是输入admin密码。
+
+看到root@……：~#这样的信息就是已经进入到root账号了。
+
+设置root账号密码，输入synouser --setpw root password 这里的password最好和admin密码一样，这样不容易搞错。
+
+TUPIAN1
+
+
+
+DSM 6.2还需要做以下操作：
+
+1、输入vi /etc/ssh/sshd_config 修改ssh配置文件，按i键进入insert模式，修改#PermitRootLogin prohibit-password 为 PermitRootLogin yes，然后按ESC键输入:wq保存退出
+
+2、输入reboot重启DSM
+
+
+
+#### 三、开启ROOT账号和修改密码
+
+1、使用putty连接DSM
+
+主机名称填写群晖的ip地址，端口是22，连接类型是SSH，点击“打开”，会报密匙对话框，点击“是”
 
 <img width="340" alt="5f7ff5da14f394006 png_e680" src="https://user-images.githubusercontent.com/59044398/117491307-9daf3480-afa2-11eb-8aa9-1a4d91447242.png">
 
@@ -72,3 +105,17 @@
 然后如下图所示设置即可。
 
 <img width="340" alt="5f7ffbaeb9aec7736 png_e680" src="https://user-images.githubusercontent.com/59044398/117491455-d3541d80-afa2-11eb-83ce-c3330f71d44e.png">
+
+##### 也可以使用这种方法
+
+1、先到套件中心安装perl插件
+
+2、下载本教程下载列表中的ConfigFileEditor-noarch-16.spk插件，手动安装该插件（该插件不含数字签名，确定就好）
+
+3、打开config file editor，选择Config File Editor，在最后加上 /etc/sudoers, sudoers 保存后重新打开config file editor
+
+
+
+
+
+PS：其实这个工具也可以直接修改sshd_config文件，直接选择ssh，然后找到 #PermitRootLogin prohibit-password 修改为 PermitRootLogin yes ，然后保存后重启DSM即可。

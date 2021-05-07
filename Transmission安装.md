@@ -110,6 +110,10 @@ Incomplete directory：未完成下载目录，留空表示禁用（建议不填
 
 8、中文界面就出来了
 
+ps：如果SCP显示禁止访问，不能复制，请见SCP权限设置方法
+
+【https://github.com/Meidouzanget/Synology/blob/main/SCP%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6%E6%9D%83%E9%99%90.md】
+
 ![38598199-0d2e684c-3d8e-11e8-8b21-3cd1f3c7580a](https://user-images.githubusercontent.com/59044398/117431066-5e112a00-af5b-11eb-8756-6588fc080bab.png)
 
 

@@ -56,7 +56,8 @@ Watch directory：保存种子存储目录，留空表示禁用（可以填写�
 
 Incomplete directory：未完成下载目录，留空表示禁用（建议不填写，留空）
 
-257-5.png
+![51511533524991](https://user-images.githubusercontent.com/59044398/117427210-636c7580-af57-11eb-8c4b-cc376e362a6f.png)
+
 
 3、设置用户账号和密码（每次进入TR需要输入的用户名和密码）
 设置好并记住，否则无法进入网页，要卸载重装

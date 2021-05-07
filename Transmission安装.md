@@ -88,3 +88,23 @@ Incomplete directory：未完成下载目录，留空表示禁用（建议不填
 打开“File station”，“downloads”文件夹右击，选择“属性”，新增“Everyone”账号，权限选择“读取”和“写入”，勾上“应用到这个文件夹、子文件夹及文件”，确定
 
 
+三、界面汉化
+
+1、Transmission安装完成后打开界面如下，是英文界面，你可以把它进行汉化
+
+![thum-01aa1533537168](https://user-images.githubusercontent.com/59044398/117431044-56ea1c00-af5b-11eb-814b-4f047bd5609d.png)
+
+2、汉化包项目地址：https://github.com/ronggang/transmission-web-control
+
+3、解压文件，会得到web文件夹和此“使用方法”文件
+4、用WinSCP以root登录群晖，进入/volume1/@appstore/transmission/share/transmission，如果你的套件安装在盘1则地址是/volume1，以此类推。（如果）
+5、把群晖上的web文件夹改成web-bak
+6、把解压出来的web文件复制到群晖
+7、电脑浏览器打开http://群晖IP:9091，按下Ctrl+F5，强制刷新浏览器
+8、中文界面就出来了
+
+![38598199-0d2e684c-3d8e-11e8-8b21-3cd1f3c7580a](https://user-images.githubusercontent.com/59044398/117431066-5e112a00-af5b-11eb-8756-6588fc080bab.png)
+
+
+
+

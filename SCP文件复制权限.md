@@ -38,6 +38,9 @@
 
 可以看到已经变成了root权限。
 
+![捕获 4744PNG](https://user-images.githubusercontent.com/59044398/117491620-04345280-afa3-11eb-95a6-9db643981033.PNG)
+
+
 5.输入CD /etc并回车，进入etc目录。
 
 ![捕获](https://user-images.githubusercontent.com/59044398/117491376-b3bcf500-afa2-11eb-91bb-8022d407c9aa.PNG)

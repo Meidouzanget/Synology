@@ -45,7 +45,8 @@ http://packages.synocommunity.com/?beta=1
 
 1、在“套件中心”的“社群”找到“Transmission”，点击“安装套件”，会自动下载安装
 
-[Uploading 0c1c1533524991.png…]()
+![0c1c1533524991](https://user-images.githubusercontent.com/59044398/117427433-9dd61280-af57-11eb-96fd-661f4a2b5172.png)
+
 
 
 2、Transmission下载设置
@@ -62,7 +63,8 @@ Incomplete directory：未完成下载目录，留空表示禁用（建议不填
 3、设置用户账号和密码（每次进入TR需要输入的用户名和密码）
 设置好并记住，否则无法进入网页，要卸载重装
 
-[Uploading thum-78d51533532065.png…]()
+![thum-78d51533532065](https://user-images.githubusercontent.com/59044398/117427404-96af0480-af57-11eb-9e28-702a6cf979fd.png)
+
 
 
 4、权限提示，直接“下一步”
@@ -70,14 +72,14 @@ Incomplete directory：未完成下载目录，留空表示禁用（建议不填
 
 5、安装完成后后，打开“套件中心” ---> “Transmission”，找到URL，可以直接打开Web UI（如果你用内网地址安装，则显示内网地址）
 
-[fe2e1533532355](https://user-images.githubusercontent.com/59044398/117426540-95c9a300-af56-11eb-8ade-e92e767fb741.png)
+![fe2e1533532355](https://user-images.githubusercontent.com/59044398/117427321-826b0780-af57-11eb-91a4-5a587d87d6f7.png)
 
 
 6、文件夹权限设置（这个步骤非常重要，否则你的TR下载不了）
 
 打开“控制面板” ---> “共享文件夹” ---> “downloads”（刚才安装Transmission创建的下载文件夹名称），点击“编辑”，选择“本地群组”，选择“sc-download”设置为可读写
 
-[Uploading thum-91a41533536525.png…]()
+![thum-91a41533536525](https://user-images.githubusercontent.com/59044398/117427373-8eef6000-af57-11eb-87c8-3c318efc38f5.png)
 
 
 打开“File station”，“downloads”文件夹右击，选择“属性”，新增“Everyone”账号，权限选择“读取”和“写入”，勾上“应用到这个文件夹、子文件夹及文件”，确定

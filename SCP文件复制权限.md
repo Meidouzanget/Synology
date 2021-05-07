@@ -11,7 +11,7 @@
 
 出现这个问题的原因是winscp没有获取到最高权限，无法对一些高权限文件夹进行操作。因此，我们需要想办法使winscp能够通过root权限登陆群晖，以实现类似“sudo -i”命令的root提权功能。
 
-以前DSM6.0的时候可以通过改root密码的方式，来通过winscp来登录nas，这样可以获得最高权限可以任意修改文件。但是在DSM6.2的时候群晖把这个方式封了，幸好现在找到了另外的方式来解封
+##### 以前DSM6.0的时候可以通过改root密码的方式，来通过winscp来登录nas，这样可以获得最高权限可以任意修改文件。但是在DSM6.2的时候群晖把这个方式封了，幸好现在找到了另外的方式来解封
 
 #### **一、准备工具**
 
@@ -32,29 +32,7 @@
 
 2、配置root账号
 
-login as：输入admin账号。就是当时第一次配置DSM输入的账号。输入admin的密码。（输入完按回车）
 
-登录成功后，输入sudo -i
-
-会提示输入密码password，这边还是输入admin密码。
-
-看到root@……：~#这样的信息就是已经进入到root账号了。
-
-设置root账号密码，输入synouser --setpw root password 这里的password最好和admin密码一样，这样不容易搞错。
-
-TUPIAN1
-
-
-
-DSM 6.2还需要做以下操作：
-
-1、输入vi /etc/ssh/sshd_config 修改ssh配置文件，按i键进入insert模式，修改#PermitRootLogin prohibit-password 为 PermitRootLogin yes，然后按ESC键输入:wq保存退出
-
-2、输入reboot重启DSM
-
-
-
-#### 三、开启ROOT账号和修改密码
 
 1、使用putty连接DSM
 
@@ -68,8 +46,24 @@ DSM 6.2还需要做以下操作：
 4.输入sudo -i，并回车，将操作权限提升到最高的root级。这时候会要求再次输入一遍刚才的密码。
 
 
+看到root@……：~#这样的信息就是已经进入到root账号了。
 
-可以看到已经变成了root权限。
+设置root账号密码，输入synouser --setpw root password 这里的password最好和admin密码一样，这样不容易搞错。
+
+![3f821543380079](https://user-images.githubusercontent.com/59044398/117493487-9f2e2c00-afa5-11eb-94db-03daf5f88e67.png)
+
+DSM 6.2还需要做以下操作：
+
+1、输入vi /etc/ssh/sshd_config 修改ssh配置文件，按i键进入insert模式，修改#PermitRootLogin prohibit-password 为 PermitRootLogin yes，然后按ESC键输入 :wq （冒号也是输入的一部分） 保存退出
+
+2、输入reboot重启DSM
+
+-------------------------------------------以下是DSM6.2封锁之后的新操作--------------------------------------------------------------------
+
+#### 三、开启ROOT账号和修改密码
+
+
+进入root权限。
 
 ![捕获 4744PNG](https://user-images.githubusercontent.com/59044398/117491620-04345280-afa3-11eb-95a6-9db643981033.PNG)
 
@@ -90,7 +84,7 @@ DSM 6.2还需要做以下操作：
 
 %administrators ALL=(ALL) ALL  改为  %administrators ALL=NOPASSWD: ALL
 
-然后按“ESC”键，输入:wq，再按回车保存编辑。
+然后按“ESC”键，输入 :wq （冒号也是输入的一部分） ，再按回车保存编辑。
 
 <img width="340" alt="5f7ffae95b70a4413 png_e680" src="https://user-images.githubusercontent.com/59044398/117491432-c9cab580-afa2-11eb-8058-0aa1589068b2.png">
 
@@ -113,9 +107,10 @@ DSM 6.2还需要做以下操作：
 2、下载本教程下载列表中的ConfigFileEditor-noarch-16.spk插件，手动安装该插件（该插件不含数字签名，确定就好）
 
 3、打开config file editor，选择Config File Editor，在最后加上 /etc/sudoers, sudoers 保存后重新打开config file editor
+![ba6fdbdd36450260ca544f7e885e6f84](https://user-images.githubusercontent.com/59044398/117493238-4f4f6500-afa5-11eb-8f9e-7116db924c67.png)
 
-
-
+4、选择sudoers文件，修改 %administrators ALL=(ALL) ALL 这行即可。
+![ba6fdbdd36450260ca544f7e885e6f84](https://user-images.githubusercontent.com/59044398/117493361-7312ab00-afa5-11eb-81ed-a5ac71fb245b.png)
 
 
 PS：其实这个工具也可以直接修改sshd_config文件，直接选择ssh，然后找到 #PermitRootLogin prohibit-password 修改为 PermitRootLogin yes ，然后保存后重启DSM即可。

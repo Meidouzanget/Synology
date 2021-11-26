@@ -92,5 +92,5 @@ for key in keys:    print keys[key]    shutil.copy2(keys[key]['src_path'] + '/ce
 [^2018.05.30]: 泛域名的更新方法我已经另写了另一篇文章，大家可以参考：群晖 Let’s Encrypt 泛域名证书自动更新
 
 参考
-forum.51nb.com: 群晖安装并自动续期 Let’s Encrypt SSL 证书
-Neilpang/acme.sh 说明
+forum.51nb.com: 群晖安装并自动续期 Let’s Encrypt SSL 证书https://forum.51nb.com/thread-1789843-1-1.html
+Neilpang/acme.sh 说明https://github.com/Neilpang/acme.sh/wiki/%E8%AF%B4%E6%98%8E

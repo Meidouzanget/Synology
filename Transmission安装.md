@@ -112,6 +112,16 @@ Incomplete directory：未完成下载目录，留空表示禁用（建议不填
 
 【https://github.com/Meidouzanget/Synology/blob/main/SCP%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6%E6%9D%83%E9%99%90.md 】
 
+##### pps：7.0复制后显示没有权限，我们对症下药，右键属性，赋予复制的文件与原来旧的index.html同样的权限设置
+
+![image](https://user-images.githubusercontent.com/59044398/217455828-f6d6df90-2e82-4702-8349-6565b5a08183.png)
+
+
+文件夹勾选，循环设定，应用到所有下属文件
+
+![image](https://user-images.githubusercontent.com/59044398/217455273-38f022d4-d9b5-4811-a49c-b3268f8f176c.png)
+
+
 ![38598199-0d2e684c-3d8e-11e8-8b21-3cd1f3c7580a](https://user-images.githubusercontent.com/59044398/117431066-5e112a00-af5b-11eb-8756-6588fc080bab.png)
 
 

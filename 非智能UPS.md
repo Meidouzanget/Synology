@@ -12,8 +12,7 @@
 
 ![image](https://user-images.githubusercontent.com/59044398/218308601-32bdaef2-b698-4979-ab73-0cab4bfd676f.png)
 
-
-
+点击下载[代码.zip](https://github.com/Meidouzanget/Synology/files/10717243/default.zip)
 
 
 ``` bash
@@ -57,3 +56,9 @@ for ((dmtcai=1;dmtcai>=0;dmtcai++)) do
         fi
 sleep $sleep_time
 done
+
+```
+
+
+
+

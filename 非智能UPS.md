@@ -20,24 +20,27 @@
 #!/bin/bash
 
 #断网等待时间
-sleep_time="30s"
+sleep_time="60s"
 retry_time="60s"
 
-#路由器IP
-Route_ip="192.168.100.41"
+#米家控制中枢
+Route_ip="192.168.100.70"
 for ((dmtcai=1;dmtcai>=0;dmtcai++)) do
 
         if ping -c1 -w1 $Route_ip &> /dev/null 
         then
             echo "Route Power on, ping " + $Route_ip
         else
-            echo "Route Power off ， DSM will shutdown after 3 times retry" + $retry_time
+            echo "Route Power off ，DSM will shut down after 3 failed retry attempts，waiting" $retry_time
             synologset1 sys warn 0x11600036
+            date
             sleep $retry_time
 
             for ((dmtcai=1;dmtcai<=5;dmtcai++)) do
                 if [ $dmtcai == 5 ]
                 then
+                    echo "shutdown execution" 
+                    date
                     synologset1 sys warn 0x11600037
                     poweroff
                 else
@@ -45,10 +48,12 @@ for ((dmtcai=1;dmtcai>=0;dmtcai++)) do
                     then
                         echo "Route online, ping "+ $Route_ip , shutdown cancel
                         synologset1 sys warn 0x11600035
+                        date
                         break
                     else
                         sleep $retry_time
                         echo "Route offline, retry connect..."
+                        date
                     fi
                 fi
             done

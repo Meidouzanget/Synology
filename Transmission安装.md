@@ -96,6 +96,9 @@ Incomplete directory：未完成下载目录，留空表示禁用（建议不填
 
 2、汉化包项目地址：https://github.com/ronggang/transmission-web-control
 
+[直接下载 v.1.6.1-update1.zip](https://github.com/user-attachments/files/18920073/transmission-web-control-1.6.1-update1.zip)
+
+
 3、解压文件参考官网的安装教程 https://github.com/ronggang/transmission-web-control/wiki/Windows-Installation-CN
 
 4、用WinSCP以root登录群晖，进入/volume1/@appstore/transmission/share/transmission/web，如果你的套件安装在盘1则地址是/volume1，以此类推。或者 /usr/local/transmission/share/transmission/web，不同的方法进入相同的文件夹
